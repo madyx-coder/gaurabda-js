@@ -1,19 +1,23 @@
-import { Calendar } from 'gaurabda-js';
+const { Calendar } = require('gaurabda-js');
 
-export default function handler(req, res) {
-  const date = req.query.date || '2025-06-26';
+module.exports = (req, res) => {
+  const { date = '2025-06-26' } = req.query;
 
-  // Mumbai default coordinates
-  const latitude = 19.076;
+  const latitude = 19.076;   // Mumbai
   const longitude = 72.877;
 
-  const cal = new Calendar({
-    date: new Date(date),
-    latitude,
-    longitude,
-  });
+  try {
+    const cal = new Calendar({
+      date: new Date(date),
+      latitude,
+      longitude,
+    });
 
-  const result = cal.getDayData();
+    const result = cal.getDayData();
 
-  res.status(200).json(result);
-}
+    res.status(200).json(result);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Calendar calculation failed.' });
+  }
+};
