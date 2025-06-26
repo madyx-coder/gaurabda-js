@@ -1,9 +1,0 @@
-{
-  "name": "vaishnava-api",
-  "version": "1.0.0",
-  "main": "index.js",
-  "type": "commonjs",
-  "dependencies": {
-    "gaurabda-js": "github:gopa810/gaurabda-js"
-  }
-}
