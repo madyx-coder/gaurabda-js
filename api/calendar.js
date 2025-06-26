@@ -1,4 +1,5 @@
-import { Calendar } from '../js/calendar.js';  // or correct relative path
+import { GCCalendar } from '../js/GCCalendar.js';
+// or correct relative path
 
 export default function handler(req, res) {
   const date = req.query.date || '2025-06-26';
