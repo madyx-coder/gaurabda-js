@@ -1,22 +1,18 @@
-import { Calendar } from '../src/calendar/index.js'; // <-- direct path to source
+const { Calendar } = require('gaurabda-js');
 
-export default function handler(req, res) {
-  try {
-    const date = req.query.date || '2025-06-26';
+module.exports = (req, res) => {
+  const date = req.query.date || '2025-06-26';
 
-    const latitude = 19.076;  // Mumbai
-    const longitude = 72.877;
+  const latitude = 19.076;
+  const longitude = 72.877;
 
-    const cal = new Calendar({
-      date: new Date(date),
-      latitude,
-      longitude,
-    });
+  const cal = new Calendar({
+    date: new Date(date),
+    latitude,
+    longitude,
+  });
 
-    const result = cal.getDayData();
+  const result = cal.getDayData();
 
-    res.status(200).json(result);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-}
+  res.status(200).json(result);
+};
