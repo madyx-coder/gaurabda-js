@@ -4,6 +4,6 @@
   "main": "index.js",
   "type": "commonjs",
   "dependencies": {
-    "gaurabda-js": "^1.0.1"
+    "gaurabda-js": "github:gopa810/gaurabda-js"
   }
 }
