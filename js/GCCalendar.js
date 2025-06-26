@@ -196,3 +196,4 @@ class GCCalendar {
 		return (nMasa == 12) ? 12 : ((nMasa + 1) % 12);
 	}
 }
+export { GCCalendar };
