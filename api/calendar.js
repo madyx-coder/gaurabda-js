@@ -1,19 +1,25 @@
-import { GCCalendar } from '../js/GCCalendar.js';
-// or correct relative path
+import { GCCalendar } from '../js/GCCalendar.js'; // adjust path
+import { GCAstroData } from '../js/GCAstroData.js'; // for earth data, if needed
+import { GregorianDateTime } from '../js/GregorianDateTime.js'; // date utils
 
 export default function handler(req, res) {
-  const date = req.query.date || '2025-06-26';
+  // Get date from query or use today
+  const dateStr = req.query.date || new Date().toISOString().slice(0, 10);
+  const [year, month, day] = dateStr.split('-').map(Number);
 
-  const latitude = 19.076;
-  const longitude = 72.877;
+  // Create GregorianDateTime object (assuming constructor: year, month, day)
+  const vc = new GregorianDateTime(year, month, day);
 
-  const cal = new Calendar({
-    date: new Date(date),
-    latitude,
-    longitude,
+  // Create earth/astro data instance
+  const earth = new GCAstroData();
+  // You may need to set location/latitude/longitude if required
+
+  // Use GCCalendar method, e.g. get Gaurabda year
+  const gaurabdaYear = GCCalendar.GetGaurabdaYear(vc, earth);
+
+  res.status(200).json({
+    date: dateStr,
+    gaurabdaYear,
+    // Add other info as needed
   });
-
-  const result = cal.getDayData();
-
-  res.status(200).json(result);
 }
