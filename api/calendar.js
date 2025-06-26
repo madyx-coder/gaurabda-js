@@ -1,6 +1,7 @@
 import { GCCalendar } from '../js/GCCalendar.js'; // adjust path
 import { GCAstroData } from '../js/GCAstroData.js'; // for earth data, if needed
-import { GregorianDateTime } from '../js/GregorianDateTime.js'; // date utils
+import { GregorianDateTime } from './GregorianDateTime.js';
+
 
 export default function handler(req, res) {
   // Get date from query or use today
