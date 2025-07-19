@@ -1,0 +1,7 @@
+{
+  "name": "my-gaurabda-api",
+  "version": "1.0.0",
+  "dependencies": {
+    "gaurabda-js": "github:gopa810/gaurabda-js"
+  }
+}
