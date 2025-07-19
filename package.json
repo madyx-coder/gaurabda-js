@@ -1,8 +1,8 @@
 {
-  "name": "my-gaurabda-api",
+  "name": "gaurabda-js-api",
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
-    "gaurabda-js": "github:madyx-coder/gaurabda-js"
+    "gaurabda-js": "git+https://github.com/madyx-coder/gaurabda-js.git#main"
   }
 }
