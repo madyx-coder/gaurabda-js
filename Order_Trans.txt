@@ -1,0 +1,33 @@
+-GCMath.h
+-GCDayHours.h
+-enums.h
+-GCAyanamsha.h
+-GCLayoutData
+-GCRasi
+- GCVedicTime (GaurabdaDate)
+- GCDisplaySettings
+- GCStrings
+- TCountry
+- GCGregorianTime
+- GCCoords.h
+- TTimeZone
+- GCEarthData
+- GCStringBuilder
+- LocationRef
+- GCMoonData
+- GCSunData
+- GCConjunction
+- GCNaksatra
+- GCSankranti
+- GCDayData (GCAstroData)
+- GCTithi
+- GCYoga
+- LocationList
+- CustomEventList (events.js)
+- GCGlobal
+- GCCalendar
+TResultMasaList
+TResultCalendar
+TResultApp
+TResultEvents
+TResultToday
