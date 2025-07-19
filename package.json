@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
-    "gaurabda-js": "git+https://github.com/madyx-coder/gaurabda-js.git#main"
+    "gaurabda-js": "git+https://github.com/madyx-coder/gaurabda-js.git"
   }
 }
